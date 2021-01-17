@@ -1,6 +1,7 @@
 ARG ROS_DISTRO=melodic
 FROM osrf/ros:${ROS_DISTRO}-desktop-full
 
+# GitHubPushテスト
 # Dockerのビルドに必要なツールのインストール
 #------------------------------------------------
 RUN apt-get update -q && apt-get upgrade -yq && apt-get install -y --no-install-recommends \

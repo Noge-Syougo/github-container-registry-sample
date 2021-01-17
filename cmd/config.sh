@@ -2,7 +2,7 @@
 # config values
 #----------------------------------------------------------
 # GitHubのユーザ名(リポジトリパスに含まれる)
-GITHUB_USER=k0inoue
+GITHUB_USER=Noge-Syougo
 
 # Dockerイメージを登録するレジストリのURL
 REGISTRY_ROOT=ghcr.io
