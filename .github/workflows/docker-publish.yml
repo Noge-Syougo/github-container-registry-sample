@@ -57,7 +57,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
+          username: noge-syougo
           password: ${{ secrets.CR_PAT }}
 
       - name: Build and push
@@ -67,8 +67,8 @@ jobs:
           file: ${{ env.BASE_DOCKER_FILE }}
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ env.BASE_IMAGE_NAME }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ env.BASE_IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
+            ghcr.io/noge-syougo/${{ env.BASE_IMAGE_NAME }}:latest
+            ghcr.io/noge-syougo/${{ env.BASE_IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
 
   # Push custom image to GitHub Packages.
   custom-push:
@@ -98,6 +98,6 @@ jobs:
           file: ${{ env.CUSTOM_DOCKER_FILE }}
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ env.CUSTOM_IMAGE_NAME }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ env.CUSTOM_IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
+            ghcr.io/noge-syougo/${{ env.CUSTOM_IMAGE_NAME }}:latest
+            ghcr.io/noge-syougo/${{ env.CUSTOM_IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
 
